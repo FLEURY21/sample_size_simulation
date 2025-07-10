@@ -1,0 +1,12 @@
+{
+  "hash": "03cef891296f8eaf796dcddf0a5c7879",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"\"\nformat:\n  html:\n    toc: true\n    theme:\n        light: cosmo\n        dark: darkly\n    code-fold: true\njupyter: python3\n---\n\n\n\n\n\nTo perform a simple simulation sample size to explore all parameters you can use our TKinter application which is a graphical interface user.\n\nIn your terminal execute the following command:\n\n```\npython3 run_simualtion_terminal_job.py\n```\n\nA tkinter window is open and you can adjust same parameters that in **IDE Execution** part. After parameters choose, click on *run simulation* and in the tabview **sample size results** you obtain optimal sample size table and in **graphics** you obtain graphics which study  $\\alpha$, $\\beta$ and MSE results in function of sample size.\n\n![](image/img1.png){width=70% fig-align=\"center\"}\n\n![](image/img2.png){width=70% fig-align=\"center\"}\n\n",
+    "supporting": [
+      "app_doc_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

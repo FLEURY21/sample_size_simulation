@@ -1,0 +1,83 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    theme:
+        light: cosmo
+        dark: darkly
+---
+
+<section>
+  <h2>About This Project</h2>
+
+  <p>
+    This website was created by <strong>Maxime Fleury</strong>, a member of the 
+    <em>Biostatistics and Methodology Unit (UBM) at the Institut Paoli-Calmettes</em>.<br>
+    <strong>Contact:</strong> <a href="mailto:fleurym@ipc.unicancer.fr">fleurym@ipc.unicancer.fr</a>
+  </p>
+
+  <p>
+    This project was initiated as part of an applied research effort in <strong>biostatistics</strong>,
+    focusing on <strong>sample size calculation methods in clinical trials</strong>,
+    with a particular emphasis on <strong>simulation approaches</strong>, including
+    <strong>Monte Carlo simulations</strong>.
+  </p>
+  </h2>
+</section>
+
+This project is in develpment phase to explore an educational way to introduce sample size by simulation.
+
+Secondary objectives was to create templates for git project and create website with [**Quarto**](https://quarto.org/) for the UBM team.
+
+
+<section>
+  <h2>Contributors</h2>
+
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #444; padding: 10px; text-align: left;">Name</th>
+        <th style="border-bottom: 2px solid #444; padding: 10px; text-align: left;">Role</th>
+        <th style="border-bottom: 2px solid #444; padding: 10px; text-align: left;">Affiliation</th>
+        <th style="border-bottom: 2px solid #444; padding: 10px; text-align: left;">Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Maxime Fleury</strong></td>
+        <td>Health data scientist</td>
+        <td>Institut Paoli-Calmettes, Biostatistics & Methodology Unit</td>
+        <td><a href="mailto:fleurym@ipc.unicancer.fr">fleurym@ipc.unicancer.fr</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>License</h2>
+
+  <p>
+    <a href="https://creativecommons.org">Untitled</a> © 1999 by <a href="https://creativecommons.org">Jane Doe</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+
+
+  </p>
+  
+</section>
+
+<section>
+  <h2>Project Details</h2>
+
+  <ul>
+    <li><strong>Launch date:</strong> July 1, 2025</li>
+    <li><strong>Last documentation update:</strong> 10/07/2025</li>
+    <li><strong>Last program update:</strong> 10/07/2025</li>
+    <li><strong>Current version:</strong> 2.0</li>
+    <li><strong>Status of the project:</strong> In development</li>
+    <li><strong>Status of the documentation:</strong> In development</li>
+  </ul>
+</section>
+
+## Acknowledgements
+
+I would like to express my sincere gratitude to **Patrick Sfumato** and **Christophe Zemmour**,   members of the <i>Biostatistics and Methodology Unit of the Paoli-Calmettes Institute</i>, for their valuable support in understanding the **methodological** and **statistical** aspects of this project.

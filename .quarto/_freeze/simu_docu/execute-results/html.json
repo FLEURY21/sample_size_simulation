@@ -1,0 +1,12 @@
+{
+  "hash": "82074274247d77c566668cd68244edac",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"\"\nformat:\n  html:\n    toc: true\n    theme:\n        light: cosmo\n        dark: darkly\n    code-fold: true\njupyter: python3\n---\n\n\n\n\n\n<iframe src=\"simulations.html\" style=\"width:100%; height:800px;\" frameborder=\"0\"></iframe>\n\n",
+    "supporting": [
+      "simu_docu_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

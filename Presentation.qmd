@@ -1,0 +1,79 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    theme:
+        light: cosmo
+        dark: darkly
+---
+
+# Introduction
+
+**<span style="color: red;">Sample size calculation</span>** is a fundamental step in the design of any clinical trial. The objective is to strike a balance between two core needs:
+
+- **Ensuring sufficient statistical power**, by controlling Type [I](https://fr.wikipedia.org/wiki/Test_statistique#Risque_de_premi%C3%A8re_esp%C3%A8ce_et_confiance) and Type [II](https://fr.wikipedia.org/wiki/Test_statistique#Risque_de_deuxi%C3%A8me_esp%C3%A8ce_et_puissance) errors.  
+
+- **Minimizing patient exposure** to experimental treatments during the trial phase.
+
+With the rise of innovative therapies — particularly in oncology (e.g., immunotherapy) — and the growth of artificial intelligence, clinical questions have become more complex. This has led to increasingly sophisticated statistical hypotheses. As a result, **classical formulas** for sample size calculation are often no longer sufficient, and **simulation-based approaches** are now essential.
+
+
+
+## Objectives
+
+This project introduces an **<span style="color: red;">educational method for computing sample size</span>** in **non-randomized Phase II clinical trials**, where the population follows a **binomial distribution**.
+
+Developed by <span style="color: blue;">*Maxime Fleury*</span> (biostatistician at the Biostatistics and Methodology Unit of the Paoli-Calmettes Institute), the tool offers three user-level approaches:
+
+1. **Python 3 Terminal Mode**:  
+     For quick simulations directly from the command line, with immediate results.
+
+2. **IDE Execution (e.g., VS Code, PyCharm)**:  
+     For users who want to fine-tune parameters, process data, or integrate simulation functions into their own code.
+
+3. **Local GUI via Tkinter**:  
+     A *user-friendly* desktop application that enables intuitive usage and helps users explore the logic behind the project.
+
+# Installation
+
+To install this project you must dispose of MacOS, Window 10 or linux distribution. Minimal informatics power and ressources are required (intel icore I5 for exemple). You must dispose of [git](https://git-scm.com/) and [anaconda](https://anaconda.org/anaconda/conda) in last version.
+
+After, going to your desired directory where you want install this project and execute following command.
+
+**<span style="color: green;">1 Install project :</span>**
+
+```
+git clone https://gitlab.com/F.MAXIME/sample_size_simulation.git
+```
+
+A file **sample_size_simulation** is created. Then going in this file with `cd sample_size_simulation`.
+
+**<span style="color: green;">2 Install environment :</span>**
+
+This project was programed in **python3** in version **3.10** with many packages. You can obtain the list of packages when you open `config_env.yml` file in **config** directory. To install the conda environment and all dependencies execute the following command in the **config**:
+
+**<span style="color: green;">3 Install conda environment :</span>**
+
+```
+conda env create -f sample_size_simu_env.yml
+```
+
+Activate conda environment:
+
+```
+conda activate sample_size_simu_env
+```
+
+Desactivate conda environment:
+
+```
+conda deactivate
+```
+
+# Documentation
+
+To obtain more information on this project, please refer to the [GitLab repository](https://gitlab.com/F.MAXIME/sample_size_simulation)
+
+
+

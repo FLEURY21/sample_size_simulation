@@ -1,0 +1,14 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    theme:
+        light: cosmo
+        dark: darkly
+    code-fold: true
+jupyter: python3
+---
+
+<iframe src="simulations.html" style="width:100%; height:800px;" frameborder="0"></iframe>
+

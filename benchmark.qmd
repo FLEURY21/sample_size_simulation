@@ -1,0 +1,176 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    theme:
+        light: cosmo
+        dark: darkly
+    code-fold: true
+jupyter: python3
+---
+
+<h3 style="color:#004080; margin-top: 1.5em;">Introduction:</h3>
+
+<section>
+  <p>
+    This section aims to demonstrate that with the simulation method developed at <strong style="color:#004080;">UBM</strong>, 
+    type I and type II errors are properly controlled. A <strong style="color:#004080;">benchmarking</strong> analysis is presented to compare the statistical significance of test results at a fixed power of <strong>80%</strong>, based on different methods for the *Binomial confidence interval* estimation.
+  </p>
+</section>
+
+> Method can be:
+>
+> - [Wilson](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval)
+> 
+> - [Beta](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Clopper%E2%80%93Pearson_interval)
+> 
+> - [Normal](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Problems_with_using_a_normal_approximation_or_%22Wald_interval%22)
+> 
+> - [Arcsinus](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Arcsine_transformation)
+>
+
+<h3 style="color:#004080; margin-top: 1.5em;">Statement:</h3>
+
+<p>**The demonstration is based on the following scenario:**</p>
+
+  <p>
+    An experimental treatment (<strong>TR1</strong>) will be considered effective if at least <strong>70%</strong> of patients achieve a complete response at 2 years.<br>
+    According to the literature, an <strong>80%</strong> complete response rate is expected. Moreover, we suppose that patient distribution follow a *Binomial low*.
+
+    **Objective:** Determine an optimal sample size which respect all clinical recommendation (significativity and exposure criterion). To realise this objective We start with 200 patients and we research to decrease this cohort size.
+  </p>
+  <p>
+    In first part we proof that we control the alpha risk at <strong>5%</strong> and beta risk (via <strong>80%</strong> power) using a cohort of <strong>200 patients</strong>.
+  </p>
+  <p>
+    In second part, we using a method  to determine a  <strong>sample size</strong> for a clinical trial with different methods.
+  </p>
+
+```{python}
+#| echo: false   
+#| output: false 
+#| warning: false 
+#| error: false   
+from script.simulations import *
+from script.generate_graph_simulations import *
+
+alpha = 0.05
+power = 0.8
+epsilon_H0 = 0.7
+epsilon_H1 = 0.8
+H0 = 0.7
+cohort_size_start = 200
+cohort_size_end = 10
+num_simu = 1000
+
+data_simu_normal_10000 = monte_carlo_process_binomial(cohort_size_start, cohort_size_end, num_simu, epsilon_H0, epsilon_H1, H0, alpha, power, "normal")
+data_simu_beta_10000 = monte_carlo_process_binomial(cohort_size_start, cohort_size_end, num_simu, epsilon_H0, epsilon_H1, H0, alpha, power, "beta")
+data_simu_wilson_10000 = monte_carlo_process_binomial(cohort_size_start, cohort_size_end, num_simu, epsilon_H0, epsilon_H1, H0, alpha, power, "wilson")
+data_simu_arcsinus_10000 = monte_carlo_process_binomial(cohort_size_start, cohort_size_end, num_simu, epsilon_H0, epsilon_H1, H0, alpha, power, "arcsinus")
+data_simulation = pd.concat([data_simu_normal_10000, data_simu_beta_10000, data_simu_wilson_10000, data_simu_arcsinus_10000], axis=0,ignore_index=True)
+```
+
+
+<h3 style="color:#004080; margin-top: 1.5em;">$\alpha$-evolution in function of cohort size</h3>
+ 
+To evaluate the $\alpha$-evolution in function of cohort size, we use following parameter:
+
+- $\alpha$ = 0.05
+- $1 - \beta$ = 0.8
+- Hypothesis under H0 = 0.7
+- Hypothesis under H1 = 0.8
+- H0 = 0.7
+- Maximal cohort size = 200
+- Minimal cohort size = 10
+- Number of simulation = 1000
+
+
+```{python}
+#| echo: true   
+#| output: true 
+#| warning: false 
+#| error: false 
+import plotly.express as px
+
+fig = px.line(data_simulation, x="size", y="alpha", color='method')
+fig.add_hline(y=0.05, line_dash="dash", line_color="red")
+fig.show()
+```
+
+<h3 style="color:#004080; margin-top: 1.5em;">$\beta$-evolution in function of cohort size</h3>
+
+To evaluate the $\alpha$-evolution in function of cohort size, we use following parameter:
+
+- $\alpha$ = 0.05
+- $1 - \beta$ = 0.8
+- Hypothesis under H0 = 0.7
+- Hypothesis under H1 = 0.8
+- H0 = 0.7
+- Maximal cohort size = 200
+- Minimal cohort size = 10
+- Number of simulation = 1000
+
+```{python}
+#| echo: True   
+#| output: True 
+#| warning: false 
+#| error: false 
+import plotly.express as px
+
+fig = px.line(data_simulation, x="size", y="power", color='method')
+fig.add_hline(y=0.8, line_dash="dash", line_color="red")
+fig.show()
+```
+
+<h3 style="color:#004080; margin-top: 1.5em;">MSE scores evolution</h3>
+
+```{python}
+#| echo: True   
+#| output: True 
+#| warning: false 
+#| error: false 
+import plotly.express as px
+
+fig = px.line(data_simu_normal_10000, x="size", y="mse_alpha", color='method')
+fig.show()
+```
+
+```{python}
+#| echo: True   
+#| output: True 
+#| warning: false 
+#| error: false 
+import plotly.express as px
+
+fig = px.line(data_simu_wilson_10000, x="size", y="mse_alpha", color='method')
+fig.show()
+```
+
+```{python}
+#| echo: True   
+#| output: True 
+#| warning: false 
+#| error: false 
+import plotly.express as px
+
+fig = px.line(data_simu_beta_10000, x="size", y="mse_alpha", color='method')
+fig.show()
+```
+
+```{python}
+#| echo: True   
+#| output: True 
+#| warning: false 
+#| error: false 
+import plotly.express as px
+
+fig = px.line(data_simu_arcsinus_10000, x="size", y="mse_alpha", color='method')
+fig.show()
+```
+
+<h3 style="color:#004080; margin-top: 1.5em;">Conclusion</h3>
+
+From these results, we observe that all methods converge, but the arcsine transformation provides an optimal balance between statistical power and control of the type I error ($\alpha$). Furthermore, the MSE scores indicate that the calculations based on theoretical formulas and simulations are very close.
+
+Based on this study, if the arcsine transformation is used, <span style="color: red;">a suitable sample size would be 119</span> ($\alpha$ around $0.05$ and a power greater than $0.8$).

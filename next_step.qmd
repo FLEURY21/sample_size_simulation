@@ -1,0 +1,19 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    theme:
+        light: cosmo
+        dark: darkly
+---
+
+# Upcoming  objectives
+
+- Optimize program code
+
+- Optimize program docstring
+
+- Optimize quarto web
+
+- Add more theoric detail on simulation and sample size methods (maybe develop clinical research part)

@@ -1,0 +1,26 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    theme:
+        light: cosmo
+        dark: darkly
+    code-fold: true
+jupyter: python3
+---
+
+To perform a simple simulation sample size to explore all parameters you can use our TKinter application which is a graphical interface user.
+
+In your terminal execute the following command:
+
+```
+python3 run_simualtion_terminal_job.py
+```
+
+A tkinter window is open and you can adjust same parameters that in **IDE Execution** part. After parameters choose, click on *run simulation* and in the tabview **sample size results** you obtain optimal sample size table and in **graphics** you obtain graphics which study  $\alpha$, $\beta$ and MSE results in function of sample size.
+
+![](image/img1.png){width=70% fig-align="center"}
+
+![](image/img2.png){width=70% fig-align="center"}
+

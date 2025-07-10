@@ -1,0 +1,48 @@
+project:
+  type: website
+
+website:
+  title: "Sample size by Monte Carlo simulation"
+
+  page-footer: 
+    right: "This page is built [Quarto](https://quarto.org/)"
+    left: "Untitled © 1999 by Jane Doe is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+  
+  navbar:
+    background: primary
+    foreground: white
+    left:
+    - text: "Project overview"
+      href: Presentation.qmd
+    - text: "Articles"
+      menu:
+        - text: "Method Benchmarking"
+          href: benchmark.qmd
+        - text: "Sample size exemple (python version)"
+          href: exemple_python.qmd
+        - text: "Sample size exemple (application version)"
+          href: app_doc.qmd
+    - text: "API References"
+      menu:
+        - text: "Simulation"
+          href: simu_docu.qmd
+        - text: "Grahics"
+          href: docu_graph.qmd
+    - text: "About"
+      href: team.qmd
+    - text: "Next steps"
+      href: next_step.qmd                      
+    right:
+    - icon: github
+      href: https://gitlab.com/F.MAXIME
+    - icon: linkedin
+      href: https://www.linkedin.com/in/maxime-fleury-/
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-title: Contents
+    toc-location: left

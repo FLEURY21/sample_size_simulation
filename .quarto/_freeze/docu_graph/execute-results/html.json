@@ -1,0 +1,12 @@
+{
+  "hash": "dafc371e377331ce9868d64cd0d46630",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"\"\nformat:\n  html:\n    toc: true\n    theme:\n        light: cosmo\n        dark: darkly\n    code-fold: true\njupyter: python3\n---\n\n\n\n\n\n<iframe src=\"generate_graph_simulations.html\" style=\"width:100%; height:800px;\" frameborder=\"0\"></iframe>\n\n",
+    "supporting": [
+      "docu_graph_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
