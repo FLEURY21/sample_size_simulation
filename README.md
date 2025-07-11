@@ -27,7 +27,7 @@ Developed by *Maxime Fleury* (biostatistician at the Biostatistics and Methodolo
 
 ---
 
-This project can be found on the vignette (link to the vignette in progress), on GitLab and GitHub (link in progress).
+This project can be found on the vignette (link to the vignette in progress), on  [GitHub](https://github.com/FLEURY21/sample_size_simulation/).
 
 ## Installation
 
@@ -50,7 +50,7 @@ This project was programed in **python3** in version **3.10** with many packages
 Install conda environment:
 
 ```
-conda env create -f sample_size_simu_env.yml
+conda env create -f config_env.yml
 ```
 
 3 Activate conda environment:
