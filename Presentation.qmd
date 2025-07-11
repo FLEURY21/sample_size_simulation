@@ -44,7 +44,7 @@ After, going to your desired directory where you want install this project and e
 **<span style="color: green;">1 Install project :</span>**
 
 ```
-git clone https://gitlab.com/F.MAXIME/sample_size_simulation.git
+git clone https://github.com/FLEURY21/sample_size_simulation.git
 ```
 
 A file **sample_size_simulation** is created. Then going in this file with `cd sample_size_simulation`.
